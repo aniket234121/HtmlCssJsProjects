@@ -1,0 +1,137 @@
+/* body{background-color: red;} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(16, 11, 11);
+}
+
+h1 {
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 20px;
+    color: aqua;
+    font-size: 50px;
+}
+
+h1:hover {
+    color: rgb(210, 0, 210);
+}
+
+h2 {
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 10px;
+    font-size: 50px;
+}
+
+#reset {
+    height: 50px;
+    width: 200px;
+    font-size: 25px;
+
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#reset:hover {
+    color: red;
+    background-color: white;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    background-color: aqua;
+    box-shadow: rgba(243, 244, 245, 0.25) 0px 4px 8px -2px, rgba(181, 181, 181, 0.08) 0px 0px 0px 1px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+.box {
+    height: 166px;
+    width: 166px;
+    border: 1px solid aquamarine;
+    background-color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: aquamarine;
+}
+
+.congratulations {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.congratulations>h1 {
+    text-transform: uppercase;
+    animation: colorChange 5s linear 1s infinite alternate ;
+}
+
+@keyframes colorChange {
+    0% {
+        color: aqua;
+    }
+    25%{
+        color:blueviolet
+    }
+    50%{
+        color:brown
+    }
+    100% {
+        color:green;
+    }
+
+}
+
+@media (max-width:600px) {
+    .container,.congratulations{
+        height: 300px;
+        width: 300px;
+    }
+    .box{
+        width: 99px;
+        height: 99px;
+    }
+    h1,h2{
+        font-size: 25px;
+    }
+    h1{
+        margin-top: 100px;
+    }
+    .congratulations>h1{
+        margin-top: 0;
+    }
+    #reset{
+        height: 30px;
+        width: 100px;
+        font-size: 15px;
+    }
+}
